@@ -2,8 +2,6 @@ import React, {useState} from 'react';
 
 const AddForm = ({addUser}) => {
     const [user, setUser] = useState({name:'', phone:''})
-    const [name, setName] = useState('')
-    const [phone, setPhone] = useState('')
     const [nameError, setNameError] = useState('')
     const [phoneError, setPhoneError] = useState('')
 

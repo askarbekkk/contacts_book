@@ -25,12 +25,19 @@ const deleteUser = (id) => {
 
     }
 
+    const updateUser = (id, name, phone) => {
+        axios.put(`https://607539e80baf7c0017fa5850.mockapi.io/users/${id}`, {name, phone})
+            .then(({data}) => setContacts(contacts.map(el => el.id === data.id ? data : el)))
+
+    }
+
     return (
         <div className='w-1/3 mx-auto my-6'>
-          <Header  setSearch={setSearch} setShowForm={setShowForm}/>
+          <Header  setSearch={setSearch} setShowForm={setShowForm} contacts={contacts}/>
             {isShowFrom && <AddForm addUser={addUser} setShowForm={setShowForm}/>}
           <ContactList search={search}
                        contacts={contacts}
+                       updateUser={updateUser}
           onDelete={deleteUser}
           />
         </div>

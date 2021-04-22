@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Header = ({setSearch, setShowForm}) => {
+const Header = ({setSearch, setShowForm, contacts}) => {
     return (
         <div className='bg-blue-600 p-4'>
          <div className='flex justify-between mb-4'>
-             <h2 className='font-bold text-2xl text-white '>Contacts Book</h2>
+             <h2 className='font-bold text-2xl text-white '>Contacts Book ({contacts.length})</h2>
              <span
                  className='text-white font-bold text-2xl cursor-pointer'
              onClick={() => setShowForm(true)}
