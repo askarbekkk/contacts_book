@@ -14,10 +14,11 @@ const App = () => {
             .then(({data}) => setContacts(data))
     },[])
     console.log(contacts)
+
 const deleteUser = (id) => {
       axios.delete(`https://607539e80baf7c0017fa5850.mockapi.io/users/${id}`)
           .then(({data}) => setContacts(contacts.filter(el => el.id !== data.id)))
-}
+   }
 
     const addUser = (user) => {
         axios.post('https://607539e80baf7c0017fa5850.mockapi.io/users/', user)

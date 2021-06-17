@@ -45,15 +45,15 @@ const ContactListItem = ({user, onDelete, updateUser}) => {
 
 
                         />
-                       <div className="taxt-right">
+                       <div className="text-right">
                            <button
-                               className='bg-red-100 px-2 py-2  font-semobold text-red-600 rounded mr-3 mb-2'
+                               className='bg-red-100 px-2 py-2  font-semibold text-red-600 rounded mr-3 mb-2'
                                onClick={() => setEditable(false)}
                            >
                                Cancel
                            </button>
                            <button
-                               className='bg-blue-100 px-2 py-2  font-semobold  text-blue-600 rounded mr-3 mb-2'
+                               className='bg-blue-100 px-2 py-2  font-semibold  text-blue-600 rounded mr-3 mb-2'
                                disabled={newName.length === 0 || newPhone.length === 0}
                                onClick={handleSave}
                            >
